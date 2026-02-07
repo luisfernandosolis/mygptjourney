@@ -1,7 +1,7 @@
 {
   "app": {
     "tagline": "Sua história com IA, lindamente contada",
-    "title": "MyGPTJourney",
+    "title": "My GPT Wrapped",
     "subtitle": "Transforme seu histórico do ChatGPT em uma experiência envolvente e compartilhável. Descubra sua personalidade com IA, padrões ocultos e mais."
   },
   "upload": {
@@ -261,7 +261,7 @@
     "namePlaceholder": "Seu nome",
     "photoLabel": "Sua foto",
     "photoPlaceholder": "Adicionar foto",
-    "aiWrapped": "AI Wrapped 2025",
+    "aiWrapped": "AI Wrapped",
     "conversations": "Conversas",
     "messages": "Mensagens",
     "dayStreak": "Dias seguidos",
@@ -274,6 +274,10 @@
       "matematicas": "Matemática",
       "diseno": "Design"
     },
+    "addictionLevelTitle": "Seu nível de vício no ChatGPT é",
+    "addictionLevelPercent": "{{value}}%",
+    "friendshipScoreTitle": "Seu nível de amizade com ChatGPT é",
+    "friendshipScorePercent": "{{value}}%",
     "saveImage": "Salvar imagem",
     "saving": "Salvando...",
     "uploading": "Enviando imagem...",
@@ -288,7 +292,7 @@
     "moreSharing": "Mais opções de compartilhamento",
     "startOver": "Começar de novo com outro arquivo",
     "privacy": "Seus dados foram processados inteiramente no seu navegador. Nada foi enviado a nenhum servidor. 🔒",
-    "shareTitle": "Minha jornada GPT"
+    "shareTitle": "My GPT Wrapped"
   },
   "nav": {
     "back": "Voltar",

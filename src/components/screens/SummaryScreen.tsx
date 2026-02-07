@@ -104,22 +104,29 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
     return url;
   };
 
+  const getDownloadFilename = () => {
+    const firstName = userName.trim().split(/\s+/)[0] || 'user';
+    const sanitized = firstName.replace(/[/\\:*?"<>|]/g, '');
+    return `the gpt wrapped of ${sanitized || 'user'}.png`;
+  };
+
   const handleDownload = async () => {
     if (!canShare) {
       alert(t('summary.namePhotoRequired'));
       return;
     }
     setDownloading(true);
+    const filename = getDownloadFilename();
     if (useSupabase) {
       const url = await ensureUploadedImage();
       if (url) {
-        const success = await downloadShareImage('share-card', 'my-gpt-journey.png', url);
+        const success = await downloadShareImage('share-card', filename, url);
         if (!success) alert(t('summary.downloadError'));
       } else {
         alert(t('summary.uploadError'));
       }
     } else {
-      const success = await downloadShareImage('share-card');
+      const success = await downloadShareImage('share-card', filename);
       if (!success) alert(t('summary.downloadError'));
     }
     setDownloading(false);
@@ -178,7 +185,7 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
           className="flex-1 px-4 py-3 rounded-xl glass bg-white/5 border border-white/10 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-primary/50"
           maxLength={30}
         />
-        <label className={`flex items-center justify-center gap-2 px-4 py-3 rounded-xl glass bg-white/5 border border-white/10 text-white/80 transition-colors ${uploadingPhoto ? 'opacity-50 cursor-wait' : 'hover:bg-white/10 cursor-pointer'}`}>
+        <label className={`flex items-center justify-center gap-2 px-4 py-3 rounded-xl glass bg-white/5 border border-white/10 text-white/80 ${uploadingPhoto ? 'opacity-50 cursor-wait' : 'btn-tap hover:bg-white/10 cursor-pointer'}`}>
           <ImagePlus size={18} />
           <span>{uploadingPhoto ? t('summary.uploading') : t('summary.photoPlaceholder')}</span>
           <input
@@ -194,7 +201,7 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
         <p className="text-white/30 text-xs mb-4">{t('summary.namePhotoRequiredHint')}</p>
       )}
 
-      {/* Share card */}
+      {/* Share card - OpenAI theme */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -202,14 +209,18 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
         id="share-card"
         className="w-full max-w-sm rounded-3xl overflow-hidden mb-8"
         style={{
-          background: 'linear-gradient(135deg, #0F0B1E 0%, #1A1333 40%, #241D3D 100%)',
+          background: 'linear-gradient(135deg, #0D1117 0%, #161B22 50%, #0D1117 100%)',
+          border: '1px solid rgba(0, 166, 126, 0.2)',
         }}
       >
         <div className="p-8">
           {/* User name and photo */}
           {(userName || userPhotoUrl) && (
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-14 h-14 rounded-full overflow-hidden bg-white/10 flex items-center justify-center shrink-0">
+              <div
+                className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center shrink-0"
+                style={{ backgroundColor: 'rgba(0, 166, 126, 0.15)' }}
+              >
                 {userPhotoUrl ? (
                   <img src={userPhotoUrl} alt="" className="w-full h-full object-cover" />
                 ) : (() => {
@@ -235,8 +246,15 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
           )}
 
           <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-gradient mb-1">{t('app.title')}</h3>
-            <p className="text-white/30 text-xs">{t('summary.aiWrapped')}</p>
+            <div className="flex items-center justify-center gap-2 mb-1">
+              <img src="/openai-logo.svg" alt="OpenAI" className="w-6 h-6" />
+              <h3 className="text-2xl font-bold" style={{ color: '#FFFFFF' }}>
+                {t('app.title')}
+              </h3>
+            </div>
+            <p className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
+              {t('summary.aiWrapped')}
+            </p>
           </div>
 
           <div className="text-center mb-6">
@@ -245,30 +263,76 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
           </div>
 
           <div className="grid grid-cols-2 gap-3 mb-6">
-            <div className="bg-white/5 rounded-xl p-3 text-center">
-              <p className="text-xl font-bold text-primary">{overview.totalConversations.toLocaleString()}</p>
-              <p className="text-white/30 text-xs">{t('summary.conversations')}</p>
+            <div
+              className="rounded-xl p-3 text-center"
+              style={{ backgroundColor: 'rgba(22, 27, 34, 0.8)', border: '1px solid rgba(0, 166, 126, 0.15)' }}
+            >
+              <p className="text-xl font-bold" style={{ color: '#00A67E' }}>
+                {overview.totalConversations.toLocaleString()}
+              </p>
+              <p className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
+                {t('summary.conversations')}
+              </p>
             </div>
-            <div className="bg-white/5 rounded-xl p-3 text-center">
-              <p className="text-xl font-bold text-secondary">{overview.totalMessages.toLocaleString()}</p>
-              <p className="text-white/30 text-xs">{t('summary.messages')}</p>
+            <div
+              className="rounded-xl p-3 text-center"
+              style={{ backgroundColor: 'rgba(22, 27, 34, 0.8)', border: '1px solid rgba(0, 166, 126, 0.15)' }}
+            >
+              <p className="text-xl font-bold" style={{ color: '#58A6FF' }}>
+                {overview.totalMessages.toLocaleString()}
+              </p>
+              <p className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
+                {t('summary.messages')}
+              </p>
             </div>
-            <div className="bg-white/5 rounded-xl p-3 text-center">
-              <p className="text-xl font-bold text-accent">{powerMetrics.longestStreak}</p>
-              <p className="text-white/30 text-xs">{t('summary.dayStreak')}</p>
+            <div
+              className="rounded-xl p-3 text-center"
+              style={{ backgroundColor: 'rgba(22, 27, 34, 0.8)', border: '1px solid rgba(0, 166, 126, 0.15)' }}
+            >
+              <p className="text-xl font-bold" style={{ color: '#00A67E' }}>
+                {powerMetrics.longestStreak}
+              </p>
+              <p className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
+                {t('summary.dayStreak')}
+              </p>
             </div>
-            <div className="bg-white/5 rounded-xl p-3 text-center">
-              <p className="text-xl font-bold text-accent-2">{shareCardCategories[0] ? t(`summary.shareCategories.${shareCardCategories[0].key}`) : 'N/A'}</p>
-              <p className="text-white/30 text-xs">{t('summary.topCategory')}</p>
+            <div
+              className="rounded-xl p-3 text-center"
+              style={{ backgroundColor: 'rgba(22, 27, 34, 0.8)', border: '1px solid rgba(0, 166, 126, 0.15)' }}
+            >
+              <p className="text-xl font-bold" style={{ color: '#58A6FF' }}>
+                {shareCardCategories[0] ? t(`summary.shareCategories.${shareCardCategories[0].key}`) : 'N/A'}
+              </p>
+              <p className="text-xs" style={{ color: 'rgba(255, 255, 255, 0.5)' }}>
+                {t('summary.topCategory')}
+              </p>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-1 justify-center">
-            {shareCardCategories.slice(0, 5).map((cat) => (
-              <span key={cat.key} className="px-2 py-0.5 rounded-full text-[10px] bg-white/5 text-white/40">
-                {t(`summary.shareCategories.${cat.key}`)}
-              </span>
-            ))}
+          <div className="mt-4">
+            <p className="text-xs text-center mb-2" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
+              {t('summary.friendshipScoreTitle')}
+            </p>
+              <div className="flex items-center gap-2">
+                <div
+                  className="flex-1 h-3 rounded-full overflow-hidden"
+                  style={{ backgroundColor: 'rgba(22, 27, 34, 0.9)' }}
+                >
+                  <div
+                    className="h-full rounded-full transition-all duration-500"
+                    style={{
+                      width: `${powerMetrics.friendshipScore}%`,
+                      background: 'linear-gradient(90deg, #FF6B9D 0%, #00A67E 100%)',
+                    }}
+                  />
+                </div>
+                <span
+                  className="text-sm font-bold shrink-0 w-12 text-right"
+                  style={{ color: '#FF6B9D' }}
+                >
+                  {t('summary.friendshipScorePercent', { value: powerMetrics.friendshipScore })}
+                </span>
+              </div>
           </div>
         </div>
       </motion.div>
@@ -283,7 +347,7 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
         <button
           onClick={handleDownload}
           disabled={!canShare || downloading || uploading || uploadingPhoto}
-          className="flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-primary text-white font-medium hover:opacity-90 transition-opacity glow disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn-tap flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-primary text-white font-medium hover:opacity-90 glow disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Download size={16} />
           {uploading ? t('summary.uploading') : downloading ? t('summary.saving') : t('summary.saveImage')}
@@ -292,7 +356,7 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
         <button
           onClick={() => shareToTwitter(shareText)}
           disabled={!canShare}
-          className="flex items-center gap-2 px-5 py-3 rounded-full glass hover:bg-white/10 transition-colors text-white disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn-tap flex items-center gap-2 px-5 py-3 rounded-full glass hover:bg-white/10 text-white disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Twitter size={16} />
           {t('summary.twitter')}
@@ -301,7 +365,7 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
         <button
           onClick={handleLinkedIn}
           disabled={!canShare || uploading || uploadingPhoto}
-          className="flex items-center gap-2 px-5 py-3 rounded-full glass hover:bg-white/10 transition-colors text-white disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn-tap flex items-center gap-2 px-5 py-3 rounded-full glass hover:bg-white/10 text-white disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Linkedin size={16} />
           {t('summary.linkedin')}
@@ -310,7 +374,7 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
         <button
           onClick={handleCopy}
           disabled={!canShare}
-          className="flex items-center gap-2 px-5 py-3 rounded-full glass hover:bg-white/10 transition-colors text-white disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn-tap flex items-center gap-2 px-5 py-3 rounded-full glass hover:bg-white/10 text-white disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <AnimatePresence mode="wait">
             {copied ? (
@@ -336,7 +400,7 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
           transition={{ delay: 0.7 }}
           onClick={() => canShare && navigator.share({ title: t('summary.shareTitle'), text: shareText })}
           disabled={!canShare}
-          className="flex items-center gap-2 text-white/40 hover:text-white/60 transition-colors mb-8 text-sm disabled:opacity-30 disabled:cursor-not-allowed"
+          className="btn-tap flex items-center gap-2 text-white/40 hover:text-white/60 mb-8 text-sm disabled:opacity-30 disabled:cursor-not-allowed"
         >
           <Share2 size={14} />
           {t('summary.moreSharing')}
@@ -349,7 +413,7 @@ export default function SummaryScreen({ analytics, onReset }: Props) {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         onClick={onReset}
-        className="flex items-center gap-2 text-white/30 hover:text-white/50 transition-colors text-sm"
+        className="btn-tap flex items-center gap-2 text-white/30 hover:text-white/50 text-sm cursor-pointer"
       >
         <RotateCcw size={14} />
         {t('summary.startOver')}

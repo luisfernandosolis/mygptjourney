@@ -33,7 +33,7 @@ export async function generateShareImage(elementId: string): Promise<Blob | null
 
   try {
     const blob = await toBlob(element, {
-      backgroundColor: '#0F0B1E',
+      backgroundColor: '#0D1117',
       cacheBust: true,
       pixelRatio: 2,
       skipFonts: true,
@@ -137,5 +137,5 @@ export function generateShareText(stats: {
   topTopic: string;
   streak: number;
 }): string {
-  return `🚀 My ChatGPT Journey Wrapped!\n\n💬 ${stats.totalConversations.toLocaleString()} conversations\n📝 ${stats.totalMessages.toLocaleString()} messages\n🎭 Personality: ${stats.archetype}\n🏆 Top topic: ${stats.topTopic}\n🔥 Longest streak: ${stats.streak} days\n\nDiscover yours at MyGPTJourney.com\n#MyGPTJourney #ChatGPT #AIWrapped`;
+  return `🚀 My GPT Wrapped!\n\n💬 ${stats.totalConversations.toLocaleString()} conversations\n📝 ${stats.totalMessages.toLocaleString()} messages\n🎭 Personality: ${stats.archetype}\n🏆 Top topic: ${stats.topTopic}\n🔥 Longest streak: ${stats.streak} days\n\n#MyGPTWrapped #ChatGPT #AIWrapped`;
 }

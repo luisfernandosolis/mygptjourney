@@ -20,7 +20,9 @@ export default function NavigationButtons({ onPrev, onNext, canGoPrev, canGoNext
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={onPrev}
-          className="flex items-center gap-2 px-5 py-3 rounded-full glass hover:bg-white/10 transition-colors text-white/70 hover:text-white"
+          whileTap={{ scale: 0.96 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          className="btn-tap flex items-center gap-2 px-5 py-3 rounded-full glass hover:bg-white/10 text-white/70 hover:text-white"
         >
           <ChevronLeft size={18} />
           <span className="text-sm">{t('nav.back')}</span>
@@ -32,7 +34,9 @@ export default function NavigationButtons({ onPrev, onNext, canGoPrev, canGoNext
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={onNext}
-          className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-primary hover:opacity-90 transition-opacity text-white font-medium glow"
+          whileTap={{ scale: 0.96 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          className="btn-tap flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-primary hover:opacity-90 text-white font-medium glow"
         >
           <span className="text-sm">{nextLabel || t('nav.next')}</span>
           <ChevronRight size={18} />

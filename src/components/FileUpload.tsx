@@ -51,8 +51,7 @@ export default function FileUpload({ onFileSelect, error }: Props) {
         </motion.div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          <span className="text-gradient">MyGPT</span>
-          <span className="text-white">Journey</span>
+          <span className="text-gradient">{t('app.title')}</span>
         </h1>
 
         <p className="text-lg text-white/50 max-w-md mx-auto leading-relaxed">
