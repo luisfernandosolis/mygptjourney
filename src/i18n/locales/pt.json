@@ -1,0 +1,298 @@
+{
+  "app": {
+    "tagline": "Sua história com IA, lindamente contada",
+    "title": "MyGPTJourney",
+    "subtitle": "Transforme seu histórico do ChatGPT em uma experiência envolvente e compartilhável. Descubra sua personalidade com IA, padrões ocultos e mais."
+  },
+  "upload": {
+    "dropFile": "Solte seu {{file}} aqui",
+    "conversationsJson": "conversations.json",
+    "orClick": "ou clique para procurar arquivos",
+    "processing": "Processando...",
+    "clientSide": "100% no cliente",
+    "instantAnalysis": "Análise instantânea",
+    "insightScreens": "10+ telas de insights",
+    "howToExport": "Como exportar seus dados do ChatGPT",
+    "exportStep1": "Vá em Configurações do ChatGPT",
+    "exportStep2": "Clique em Controle de dados",
+    "exportStep3": "Clique em Exportar dados",
+    "exportStep4": "Aguarde o e-mail, baixe o zip",
+    "exportStep5": "Envie o conversations.json do zip"
+  },
+  "errors": {
+    "invalidFile": "Isso não parece um arquivo de exportação do ChatGPT. Por favor envie o conversations.json da sua exportação de dados.",
+    "noConversations": "Nenhuma conversa encontrada no arquivo. Certifique-se de enviar o arquivo correto.",
+    "processFailed": "Falha ao processar o arquivo"
+  },
+  "loading": {
+    "reading": "Lendo suas conversas... 📖",
+    "analyzing": "Analisando seus padrões de chat... 🔍",
+    "extracting": "Extraindo tópicos... 🧠",
+    "calculating": "Calculando sua personalidade... 🎭",
+    "discovering": "Descobrindo conquistas... 🏆",
+    "mapping": "Mapeando sua jornada... 🗺️",
+    "finding": "Encontrando fatos divertidos... 🎉",
+    "generating": "Gerando insights... ✨",
+    "almostThere": "Quase lá... 🚀",
+    "preparing": "Preparando sua experiência wrapped... 🎬"
+  },
+  "welcome": {
+    "title": "Sua jornada com IA",
+    "analyzed": "Analisamos {{conversations}} conversas e {{messages}} mensagens. Aqui está sua história.",
+    "journeySpans": "Sua jornada abrange",
+    "days": "dias",
+    "fromTo": "de {{from}} a {{to}}",
+    "swipeHint": "Deslize ou clique em Próximo para começar"
+  },
+  "overview": {
+    "title": "Em números",
+    "subtitle": "Suas estatísticas do ChatGPT de relance",
+    "conversations": "Conversas",
+    "messages": "Mensagens",
+    "wordsWritten": "Palavras escritas",
+    "daysActive": "Dias ativos",
+    "avgPerDay": "Média/dia",
+    "avgWordsPerMsg": "Média palavras/msg",
+    "longestConversation": "Conversa mais longa",
+    "messagesCount": "{{count}} mensagens"
+  },
+  "timePatterns": {
+    "title": "Quando você conversa",
+    "subtitle": "Seus padrões de conversa ao longo do tempo",
+    "peakPerson": "Você é uma pessoa {{period}}",
+    "nightOwl": "— um verdadeiro coruja noturna 🦉",
+    "byHour": "Conversas por hora",
+    "byDay": "Por dia da semana",
+    "chats": "chats",
+    "busiestDay": "Dia mais ativo",
+    "busiestMonth": "Mês mais ativo",
+    "weekdayVsWeekend": "Dias úteis vs Fim de semana",
+    "weekday": "dias úteis",
+    "periods": {
+      "morning": "Manhã",
+      "afternoon": "Tarde",
+      "evening": "Noite",
+      "night": "Madrugada"
+    },
+    "days": {
+      "sun": "Dom",
+      "mon": "Seg",
+      "tue": "Ter",
+      "wed": "Qua",
+      "thu": "Qui",
+      "fri": "Sex",
+      "sat": "Sáb"
+    },
+    "daysFull": {
+      "sun": "Domingo",
+      "mon": "Segunda",
+      "tue": "Terça",
+      "wed": "Quarta",
+      "thu": "Quinta",
+      "fri": "Sexta",
+      "sat": "Sábado"
+    }
+  },
+  "topics": {
+    "title": "Sobre o que você fala",
+    "subtitle": "Seus tópicos mais discutidos",
+    "noData": "Dados insuficientes para extrair tópicos",
+    "mentions": "menções"
+  },
+  "categories": {
+    "title": "Suas categorias",
+    "subtitle": "Como você usa o ChatGPT",
+    "chats": "chats",
+    "conversations": "conversas",
+    "modelsUsed": "Modelos usados",
+    "coding": "Programação e desenvolvimento",
+    "creative": "Escrita criativa",
+    "learning": "Aprendizado e educação",
+    "business": "Negócios e carreira",
+    "data": "Dados e análise",
+    "personal": "Pessoal e estilo de vida",
+    "research": "Pesquisa e análise",
+    "design": "Design e criatividade",
+    "general": "Geral"
+  },
+  "personality": {
+    "title": "Você é",
+    "traitProfile": "Seu perfil de traços",
+    "funTitle": "Seu título divertido",
+    "traits": {
+      "curiosity": "Curiosidade",
+      "verbosity": "Verbosidade",
+      "diversity": "Diversidade",
+      "consistency": "Consistência",
+      "creativity": "Criatividade",
+      "technical": "Técnico"
+    },
+    "archetypes": {
+      "midnight_coder": "O programador noturno",
+      "midnight_coder_desc": "Você programa até altas horas enquanto o mundo dorme. Suas melhores ideias vêm quando as estrelas brilham.",
+      "midnight_coder_fun": "Desenvolvedor coruja",
+      "curious_explorer": "O explorador curioso",
+      "curious_explorer_desc": "Sua curiosidade insaciável não conhece limites. Você explora cada canto do conhecimento com o ChatGPT como guia.",
+      "curious_explorer_fun": "Aventureiro do conhecimento",
+      "creative_genius": "O gênio criativo",
+      "creative_genius_desc": "As palavras são sua tela e o ChatGPT sua musa. Você dá vida às ideias através da expressão criativa.",
+      "creative_genius_fun": "Contador de histórias digital",
+      "code_wizard": "O mago do código",
+      "code_wizard_desc": "Você domina o código como magia, transformando problemas complexos em soluções elegantes com a IA como seu grimório.",
+      "code_wizard_fun": "Feiticeiro do silício",
+      "deep_thinker": "O pensador profundo",
+      "deep_thinker_desc": "Você não só arranha a superfície — você mergulha fundo. Suas conversas revelam uma mente que ama compreender a fundo.",
+      "deep_thinker_fun": "Mente filosófica",
+      "hustler": "O empreendedor",
+      "hustler_desc": "Sempre construindo, sempre crescendo. Você usa a IA para acelerar suas ambições de negócios e carreira.",
+      "hustler_fun": "Empreendedor impulsionado por IA",
+      "eternal_student": "O estudante eterno",
+      "eternal_student_desc": "Aprender é seu superpoder. Você transforma o ChatGPT em seu tutor pessoal para infinitos assuntos.",
+      "eternal_student_fun": "Buscador de conhecimento",
+      "ai_whisperer": "O sussurrador de IA",
+      "ai_whisperer_desc": "Você tem um jeito natural com a IA. Suas diversas conversas mostram alguém que sabe tirar o melhor do ChatGPT.",
+      "ai_whisperer_fun": "Mestre de prompts"
+    },
+    "styles": {
+      "detailed": "Você tende a dar contexto detalhado em suas conversas",
+      "concise": "Você prefere ir direto ao ponto"
+    }
+  },
+  "achievements": {
+    "title": "Conquistas",
+    "unlocked": "Você desbloqueou {{unlocked}} de {{total}} conquistas",
+    "rarity": {
+      "common": "Comum",
+      "rare": "Raro",
+      "epic": "Épico",
+      "legendary": "Lendário"
+    },
+    "items": {
+      "first-chat": { "title": "Primeiro contato", "description": "Começou sua primeira conversa com o ChatGPT" },
+      "century": { "title": "Clube do centenário", "description": "Teve 100+ conversas" },
+      "thousand": { "title": "Titã de conversas", "description": "Teve 1000+ conversas" },
+      "night-owl": { "title": "Coruja noturna", "description": "Converse frequentemente entre meia-noite e 5h" },
+      "early-bird": { "title": "Madrugador", "description": "Sua hora mais ativa é antes das 8h" },
+      "wordsmith": { "title": "Mestre das palavras", "description": "Escreveu 10.000+ palavras para o ChatGPT" },
+      "novelist": { "title": "Romancista", "description": "Escreveu 100.000+ palavras (um romance!)" },
+      "polymath": { "title": "Mente renascentista", "description": "Explorou 5+ categorias diferentes" },
+      "marathon": { "title": "Corredor de maratona", "description": "Teve uma conversa com 50+ mensagens" },
+      "speed-demon": { "title": "Demonio da velocidade", "description": "Média de 3+ conversas por dia" },
+      "coder": { "title": "Companheiro de código", "description": "30%+ de conversas sobre programação" },
+      "creative": { "title": "Sussurrador de musas", "description": "20%+ de conversas sobre escrita criativa" },
+      "weekend-warrior": { "title": "Guerreiro de fim de semana", "description": "Mais ativo aos fins de semana que durante a semana" },
+      "veteran": { "title": "Veterano de IA", "description": "Ativo por 180+ dias" }
+    }
+  },
+  "wordCloud": {
+    "title": "Suas palavras",
+    "subtitle": "As palavras que você mais usa ao conversar com IA",
+    "noData": "Dados insuficientes para gerar nuvem de palavras",
+    "uses": "{{count}} usos"
+  },
+  "moodJourney": {
+    "title": "Sua jornada de humor",
+    "subtitle": "Análise de sentimento das suas conversas ao longo do tempo",
+    "noData": "Mais dados necessários para rastrear mudanças de humor",
+    "overallMood": "Humor geral",
+    "labels": {
+      "positive": "Positivo",
+      "good": "Bom",
+      "neutral": "Neutro",
+      "mixed": "Misto",
+      "frustrated": "Frustrado"
+    }
+  },
+  "evolution": {
+    "title": "Sua evolução",
+    "subtitle": "Como seus interesses mudaram ao longo do tempo",
+    "messages": "{{count}} mensagens"
+  },
+  "powerMetrics": {
+    "title": "Métricas de poder",
+    "subtitle": "Suas estatísticas de usuário avançado",
+    "longestStreak": "Sequência mais longa",
+    "days": "dias",
+    "mostActiveDay": "Dia mais ativo",
+    "chatsCount": "{{count}} chats",
+    "questionsAsked": "Perguntas feitas",
+    "codeBlocksGenerated": "Blocos de código gerados",
+    "totalCharacters": "Caracteres totais",
+    "booksEquivalent": "Equivalente em livros",
+    "books": "livros",
+    "aiFriendshipScore": "Pontuação de amizade com IA",
+    "friendshipHigh": "Você e o ChatGPT são inseparáveis! 💕",
+    "friendshipMid": "Uma amizade sólida está se formando! 🤝",
+    "friendshipLow": "Sua amizade está apenas começando! 🌱"
+  },
+  "timeMachine": {
+    "title": "Máquina do tempo",
+    "subtitle": "Sua primeira vs sua última conversa",
+    "whereBegan": "Onde tudo começou",
+    "mostRecent": "Mais recente",
+    "youSaid": "Você disse:",
+    "thenNow": "então → agora",
+    "insight": "✨ Insight",
+    "biggestShift": "Seus tópicos evoluíram conforme você cresceu com a IA — de perguntas simples a explorações complexas."
+  },
+  "funFacts": {
+    "title": "Fatos divertidos e previsões",
+    "subtitle": "O que encontramos de interessante",
+    "predictionsTitle": "🔮 Nossas previsões para você",
+    "wordsFact": "Suas conversas contêm {{words}} palavras — equivalente a {{books}} livros!",
+    "peakHourFact": "Sua hora pico do ChatGPT é {{hour}}:00. {{nightOwl}}",
+    "nightOwlYes": "Você é um verdadeiro coruja noturna!",
+    "nightOwlNo": "Você mantém horários regulares!",
+    "busiestDayFact": "{{day}} é seu dia de ChatGPT — você conversa mais aos {{day}}s!",
+    "streakFact": "Sua sequência mais longa foi {{streak}} dias consecutivos conversando!",
+    "questionsFact": "Você fez aproximadamente {{count}} perguntas. A curiosidade definitivamente não mata este gato!",
+    "codeYesFact": "O ChatGPT gerou {{count}} blocos de código para você!",
+    "codeNoFact": "Você não precisou de muito código do ChatGPT — um verdadeiro auto-programador!",
+    "longestConvoFact": "Sua conversa mais longa teve {{count}} mensagens: \"{{title}}\"",
+    "personalityFact": "Seu tipo de personalidade com IA é \"{{archetype}}\" — {{description}}.",
+    "avgPerDayFact": "Você tem média de {{avg}} conversas por dia em {{days}} dias!",
+    "friendshipFact": "Sua pontuação de amizade com IA é {{score}}/100. {{message}}",
+    "friendshipBesties": "Você e o ChatGPT são melhores amigos!",
+    "friendshipGrowing": "Sua amizade está crescendo!"
+  },
+  "summary": {
+    "title": "Essa é sua jornada!",
+    "subtitle": "Compartilhe seu wrapped com o mundo",
+    "namePlaceholder": "Seu nome",
+    "photoLabel": "Sua foto",
+    "photoPlaceholder": "Adicionar foto",
+    "aiWrapped": "AI Wrapped 2025",
+    "conversations": "Conversas",
+    "messages": "Mensagens",
+    "dayStreak": "Dias seguidos",
+    "topTopic": "Tópico principal",
+    "topCategory": "Categoria principal",
+    "shareCategories": {
+      "programacion": "Programação",
+      "vidaPersonal": "Desenvolvimento pessoal",
+      "negocios": "Negócios",
+      "matematicas": "Matemática",
+      "diseno": "Design"
+    },
+    "saveImage": "Salvar imagem",
+    "saving": "Salvando...",
+    "uploading": "Enviando imagem...",
+    "downloadError": "Não foi possível gerar a imagem. Tente novamente.",
+    "uploadError": "Não foi possível enviar a imagem. Tente novamente.",
+    "namePhotoRequired": "Por favor, digite seu nome e envie sua foto para compartilhar ou baixar.",
+    "namePhotoRequiredHint": "Nome e foto são obrigatórios para compartilhar",
+    "twitter": "Twitter/X",
+    "linkedin": "LinkedIn",
+    "copyText": "Copiar texto",
+    "copied": "Copiado!",
+    "moreSharing": "Mais opções de compartilhamento",
+    "startOver": "Começar de novo com outro arquivo",
+    "privacy": "Seus dados foram processados inteiramente no seu navegador. Nada foi enviado a nenhum servidor. 🔒",
+    "shareTitle": "Minha jornada GPT"
+  },
+  "nav": {
+    "back": "Voltar",
+    "next": "Próximo",
+    "seeSummary": "Ver resumo"
+  }
+}

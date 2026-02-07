@@ -1,0 +1,298 @@
+{
+  "app": {
+    "tagline": "Your AI Story, Beautifully Told",
+    "title": "MyGPTJourney",
+    "subtitle": "Transform your ChatGPT history into a beautiful, shareable wrapped experience. Discover your AI personality, hidden patterns, and more."
+  },
+  "upload": {
+    "dropFile": "Drop your {{file}} here",
+    "conversationsJson": "conversations.json",
+    "orClick": "or click to browse files",
+    "processing": "Processing...",
+    "clientSide": "100% Client-Side",
+    "instantAnalysis": "Instant Analysis",
+    "insightScreens": "10+ Insight Screens",
+    "howToExport": "How to export your ChatGPT data",
+    "exportStep1": "Go to ChatGPT Settings",
+    "exportStep2": "Click Data Controls",
+    "exportStep3": "Click Export Data",
+    "exportStep4": "Wait for the email, download the zip",
+    "exportStep5": "Upload conversations.json from the zip"
+  },
+  "errors": {
+    "invalidFile": "This doesn't look like a ChatGPT export file. Please upload the conversations.json from your ChatGPT data export.",
+    "noConversations": "No conversations found in the file. Make sure you're uploading the right file.",
+    "processFailed": "Failed to process file"
+  },
+  "loading": {
+    "reading": "Reading your conversations... 📖",
+    "analyzing": "Analyzing your chat patterns... 🔍",
+    "extracting": "Extracting topics... 🧠",
+    "calculating": "Calculating your personality... 🎭",
+    "discovering": "Discovering achievements... 🏆",
+    "mapping": "Mapping your journey... 🗺️",
+    "finding": "Finding fun facts... 🎉",
+    "generating": "Generating insights... ✨",
+    "almostThere": "Almost there... 🚀",
+    "preparing": "Preparing your wrapped experience... 🎬"
+  },
+  "welcome": {
+    "title": "Your AI Journey",
+    "analyzed": "We analyzed {{conversations}} conversations and {{messages}} messages. Here's your story.",
+    "journeySpans": "Your journey spans",
+    "days": "days",
+    "fromTo": "from {{from}} to {{to}}",
+    "swipeHint": "Swipe or click Next to begin your journey"
+  },
+  "overview": {
+    "title": "By The Numbers",
+    "subtitle": "Your ChatGPT stats at a glance",
+    "conversations": "Conversations",
+    "messages": "Messages",
+    "wordsWritten": "Words Written",
+    "daysActive": "Days Active",
+    "avgPerDay": "Avg/Day",
+    "avgWordsPerMsg": "Avg Words/Msg",
+    "longestConversation": "Longest conversation",
+    "messagesCount": "{{count}} messages"
+  },
+  "timePatterns": {
+    "title": "When You Chat",
+    "subtitle": "Your conversation patterns over time",
+    "peakPerson": "You're a {{period}} person",
+    "nightOwl": "— a true Night Owl 🦉",
+    "byHour": "Conversations by Hour",
+    "byDay": "By Day of Week",
+    "chats": "chats",
+    "busiestDay": "Busiest day",
+    "busiestMonth": "Busiest month",
+    "weekdayVsWeekend": "Weekday vs Weekend",
+    "weekday": "weekday",
+    "periods": {
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening",
+      "night": "Night"
+    },
+    "days": {
+      "sun": "Sun",
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat"
+    },
+    "daysFull": {
+      "sun": "Sunday",
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    }
+  },
+  "topics": {
+    "title": "What You Talk About",
+    "subtitle": "Your most discussed topics",
+    "noData": "Not enough data to extract topics",
+    "mentions": "mentions"
+  },
+  "categories": {
+    "title": "Your Categories",
+    "subtitle": "How you use ChatGPT",
+    "chats": "chats",
+    "conversations": "conversations",
+    "modelsUsed": "Models Used",
+    "coding": "Coding & Development",
+    "creative": "Creative Writing",
+    "learning": "Learning & Education",
+    "business": "Business & Career",
+    "data": "Data & Analytics",
+    "personal": "Personal & Lifestyle",
+    "research": "Research & Analysis",
+    "design": "Design & Creativity",
+    "general": "General"
+  },
+  "personality": {
+    "title": "You are",
+    "traitProfile": "Your Trait Profile",
+    "funTitle": "Your fun title",
+    "traits": {
+      "curiosity": "Curiosity",
+      "verbosity": "Verbosity",
+      "diversity": "Diversity",
+      "consistency": "Consistency",
+      "creativity": "Creativity",
+      "technical": "Technical"
+    },
+    "archetypes": {
+      "midnight_coder": "The Midnight Coder",
+      "midnight_coder_desc": "You burn the midnight oil, crafting code while the world sleeps. Your best ideas come when the stars are out.",
+      "midnight_coder_fun": "Night Owl Developer",
+      "curious_explorer": "The Curious Explorer",
+      "curious_explorer_desc": "Your insatiable curiosity knows no bounds. You explore every corner of knowledge with ChatGPT as your guide.",
+      "curious_explorer_fun": "Knowledge Adventurer",
+      "creative_genius": "The Creative Genius",
+      "creative_genius_desc": "Words are your canvas and ChatGPT is your muse. You bring ideas to life through creative expression.",
+      "creative_genius_fun": "Digital Storyteller",
+      "code_wizard": "The Code Wizard",
+      "code_wizard_desc": "You wield code like magic, turning complex problems into elegant solutions with AI as your spellbook.",
+      "code_wizard_fun": "Silicon Sorcerer",
+      "deep_thinker": "The Deep Thinker",
+      "deep_thinker_desc": "You don't just scratch the surface—you dive deep. Your conversations reveal a mind that loves thorough understanding.",
+      "deep_thinker_fun": "Philosophical Mind",
+      "hustler": "The Hustler",
+      "hustler_desc": "Always building, always growing. You use AI to accelerate your business ambitions and career trajectory.",
+      "hustler_fun": "AI-Powered Entrepreneur",
+      "eternal_student": "The Eternal Student",
+      "eternal_student_desc": "Learning is your superpower. You turn ChatGPT into your personal tutor for endless subjects.",
+      "eternal_student_fun": "Knowledge Seeker",
+      "ai_whisperer": "The AI Whisperer",
+      "ai_whisperer_desc": "You have a natural way with AI. Your diverse conversations show someone who truly understands how to get the best from ChatGPT.",
+      "ai_whisperer_fun": "Prompt Master"
+    },
+    "styles": {
+      "detailed": "You tend to give detailed context in your conversations",
+      "concise": "You prefer getting straight to the point"
+    }
+  },
+  "achievements": {
+    "title": "Achievements",
+    "unlocked": "You've unlocked {{unlocked}} of {{total}} achievements",
+    "rarity": {
+      "common": "Common",
+      "rare": "Rare",
+      "epic": "Epic",
+      "legendary": "Legendary"
+    },
+    "items": {
+      "first-chat": { "title": "First Contact", "description": "Started your first conversation with ChatGPT" },
+      "century": { "title": "Century Club", "description": "Had 100+ conversations" },
+      "thousand": { "title": "Conversation Titan", "description": "Had 1000+ conversations" },
+      "night-owl": { "title": "Night Owl", "description": "Frequently chat between midnight and 5 AM" },
+      "early-bird": { "title": "Early Bird", "description": "Your busiest hour is before 8 AM" },
+      "wordsmith": { "title": "Wordsmith", "description": "Wrote 10,000+ words to ChatGPT" },
+      "novelist": { "title": "Novel Writer", "description": "Wrote 100,000+ words (that's a novel!)" },
+      "polymath": { "title": "Renaissance Mind", "description": "Explored 5+ different categories" },
+      "marathon": { "title": "Marathon Runner", "description": "Had a conversation with 50+ messages" },
+      "speed-demon": { "title": "Speed Demon", "description": "Averaged 3+ conversations per day" },
+      "coder": { "title": "Code Companion", "description": "30%+ of conversations about coding" },
+      "creative": { "title": "Muse Whisperer", "description": "20%+ of conversations about creative writing" },
+      "weekend-warrior": { "title": "Weekend Warrior", "description": "More active on weekends than weekdays" },
+      "veteran": { "title": "AI Veteran", "description": "Active for 180+ days" }
+    }
+  },
+  "wordCloud": {
+    "title": "Your Words",
+    "subtitle": "The words you use most when chatting with AI",
+    "noData": "Not enough data to generate a word cloud",
+    "uses": "{{count}} uses"
+  },
+  "moodJourney": {
+    "title": "Your Mood Journey",
+    "subtitle": "Sentiment analysis of your conversations over time",
+    "noData": "Need more data to track mood changes",
+    "overallMood": "Overall mood",
+    "labels": {
+      "positive": "Positive",
+      "good": "Good",
+      "neutral": "Neutral",
+      "mixed": "Mixed",
+      "frustrated": "Frustrated"
+    }
+  },
+  "evolution": {
+    "title": "Your Evolution",
+    "subtitle": "How your interests changed over time",
+    "messages": "{{count}} messages"
+  },
+  "powerMetrics": {
+    "title": "Power Metrics",
+    "subtitle": "Your power user stats",
+    "longestStreak": "Longest Streak",
+    "days": "days",
+    "mostActiveDay": "Most Active Day",
+    "chatsCount": "{{count}} chats",
+    "questionsAsked": "Questions Asked",
+    "codeBlocksGenerated": "Code Blocks Generated",
+    "totalCharacters": "Total Characters",
+    "booksEquivalent": "Books Equivalent",
+    "books": "books",
+    "aiFriendshipScore": "AI Friendship Score",
+    "friendshipHigh": "You and ChatGPT are inseparable! 💕",
+    "friendshipMid": "A solid friendship is forming! 🤝",
+    "friendshipLow": "Your friendship is just beginning! 🌱"
+  },
+  "timeMachine": {
+    "title": "Time Machine",
+    "subtitle": "Your first vs your latest conversation",
+    "whereBegan": "Where it all began",
+    "mostRecent": "Most recent",
+    "youSaid": "You said:",
+    "thenNow": "then → now",
+    "insight": "✨ Insight",
+    "biggestShift": "Your topics have evolved as you've grown with AI — from simple questions to complex explorations."
+  },
+  "funFacts": {
+    "title": "Fun Facts & Predictions",
+    "subtitle": "The interesting stuff we found",
+    "predictionsTitle": "🔮 Our Predictions for You",
+    "wordsFact": "Your conversations contain {{words}} words — that's equivalent to {{books}} books!",
+    "peakHourFact": "Your peak ChatGPT hour is {{hour}}:00. {{nightOwl}}",
+    "nightOwlYes": "You're a true night owl!",
+    "nightOwlNo": "You keep regular hours!",
+    "busiestDayFact": "{{day}} is your ChatGPT day — you chat the most on {{day}}s!",
+    "streakFact": "Your longest streak was {{streak}} consecutive days of chatting!",
+    "questionsFact": "You've asked approximately {{count}} questions. Curiosity definitely isn't killing this cat!",
+    "codeYesFact": "ChatGPT generated {{count}} code blocks for you!",
+    "codeNoFact": "You haven't needed much code from ChatGPT — a true self-coder!",
+    "longestConvoFact": "Your longest conversation had {{count}} messages: \"{{title}}\"",
+    "personalityFact": "Your AI personality type is \"{{archetype}}\" — {{description}}.",
+    "avgPerDayFact": "You average {{avg}} conversations per day across {{days}} days!",
+    "friendshipFact": "Your AI Friendship Score is {{score}}/100. {{message}}",
+    "friendshipBesties": "You and ChatGPT are besties!",
+    "friendshipGrowing": "Your friendship is growing!"
+  },
+  "summary": {
+    "title": "That's Your Journey!",
+    "subtitle": "Share your wrapped with the world",
+    "namePlaceholder": "Your name",
+    "photoLabel": "Your photo",
+    "photoPlaceholder": "Add photo",
+    "aiWrapped": "AI Wrapped 2025",
+    "conversations": "Conversations",
+    "messages": "Messages",
+    "dayStreak": "Day Streak",
+    "topTopic": "Top Topic",
+    "topCategory": "Top category",
+    "shareCategories": {
+      "programacion": "Programming",
+      "vidaPersonal": "Personal development",
+      "negocios": "Business",
+      "matematicas": "Mathematics",
+      "diseno": "Design"
+    },
+    "saveImage": "Save Image",
+    "saving": "Saving...",
+    "uploading": "Uploading image...",
+    "downloadError": "Could not generate the image. Please try again.",
+    "uploadError": "Could not upload the image. Please try again.",
+    "namePhotoRequired": "Please enter your name and upload your photo to share or download.",
+    "namePhotoRequiredHint": "Name and photo are required to share",
+    "twitter": "Twitter/X",
+    "linkedin": "LinkedIn",
+    "copyText": "Copy Text",
+    "copied": "Copied!",
+    "moreSharing": "More sharing options",
+    "startOver": "Start over with a different file",
+    "privacy": "Your data was processed entirely in your browser. Nothing was sent to any server. 🔒",
+    "shareTitle": "My GPT Journey"
+  },
+  "nav": {
+    "back": "Back",
+    "next": "Next",
+    "seeSummary": "See Summary"
+  }
+}
