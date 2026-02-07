@@ -25,16 +25,16 @@
     "processFailed": "Error al procesar el archivo"
   },
   "loading": {
-    "reading": "Leyendo tus conversaciones... 📖",
+    "opening": "Abriendo tu archivo de datos... 📂",
+    "processing": "Procesando tu archivo... ⚡",
+    "preparing": "Preparando tu ChatGPT Journey... ✨",
     "analyzing": "Analizando tus patrones de chat... 🔍",
     "extracting": "Extrayendo temas... 🧠",
-    "calculating": "Calculando tu personalidad... 🎭",
     "discovering": "Descubriendo logros... 🏆",
-    "mapping": "Mapeando tu recorrido... 🗺️",
-    "finding": "Encontrando datos curiosos... 🎉",
     "generating": "Generando insights... ✨",
     "almostThere": "Casi listo... 🚀",
-    "preparing": "Preparando tu experiencia wrapped... 🎬"
+    "ready": "¡Tu viaje está listo! 🎉",
+    "privacy": "🔒 100% privado. Tus datos no salen de tu dispositivo. Todo se procesa en tu navegador."
   },
   "welcome": {
     "title": "Tu viaje con IA",

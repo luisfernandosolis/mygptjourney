@@ -22,16 +22,14 @@ const SCREENS: JourneyScreen[] = [
 ];
 
 const LOADING_KEYS = [
-  'loading.reading',
+  'loading.opening',
+  'loading.processing',
+  'loading.preparing',
   'loading.analyzing',
   'loading.extracting',
-  'loading.calculating',
   'loading.discovering',
-  'loading.mapping',
-  'loading.finding',
   'loading.generating',
   'loading.almostThere',
-  'loading.preparing',
 ];
 
 export function useJourney() {
@@ -83,6 +81,7 @@ export function useJourney() {
       setAnalytics(result);
 
       clearInterval(interval);
+      setLoadingMessage(t('loading.ready'));
 
       // Dramatic pause before reveal
       await new Promise((r) => setTimeout(r, 800));

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Loader2 } from 'lucide-react';
 
 interface Props {
@@ -6,6 +7,7 @@ interface Props {
 }
 
 export default function LoadingScreen({ message }: Props) {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4">
       <motion.div
@@ -50,6 +52,10 @@ export default function LoadingScreen({ message }: Props) {
         >
           {message}
         </motion.p>
+
+        <p className="mt-4 text-sm text-white/40 max-w-xs mx-auto">
+          {t('loading.privacy')}
+        </p>
 
         <div className="mt-6 flex justify-center gap-1">
           {[0, 1, 2].map((i) => (

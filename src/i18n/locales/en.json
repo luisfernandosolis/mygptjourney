@@ -25,16 +25,16 @@
     "processFailed": "Failed to process file"
   },
   "loading": {
-    "reading": "Reading your conversations... 📖",
+    "opening": "Opening your data file... 📂",
+    "processing": "Processing your file... ⚡",
+    "preparing": "Preparing your ChatGPT Journey... ✨",
     "analyzing": "Analyzing your chat patterns... 🔍",
     "extracting": "Extracting topics... 🧠",
-    "calculating": "Calculating your personality... 🎭",
     "discovering": "Discovering achievements... 🏆",
-    "mapping": "Mapping your journey... 🗺️",
-    "finding": "Finding fun facts... 🎉",
     "generating": "Generating insights... ✨",
     "almostThere": "Almost there... 🚀",
-    "preparing": "Preparing your wrapped experience... 🎬"
+    "ready": "Your journey is ready! 🎉",
+    "privacy": "🔒 100% private. Your data never leaves your device. Everything runs in your browser."
   },
   "welcome": {
     "title": "Your AI Journey",
