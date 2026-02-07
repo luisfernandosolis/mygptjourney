@@ -26,7 +26,7 @@ export default function LanguageSwitcher() {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-2 rounded-full glass hover:bg-white/10 transition-colors text-white/70 hover:text-white text-sm"
+        className="flex items-center gap-2 px-4 py-2 rounded-full glass hover:bg-white/10 transition-colors text-white/70 hover:text-white text-sm cursor-pointer"
         aria-label="Change language"
       >
         <Globe size={16} />
@@ -53,7 +53,7 @@ export default function LanguageSwitcher() {
                   key={lang.code}
                   type="button"
                   onClick={() => handleChange(lang.code)}
-                  className={`w-full px-4 py-2.5 text-left text-sm transition-colors ${
+                  className={`w-full px-4 py-2.5 text-left text-sm transition-colors cursor-pointer ${
                     i18n.language === lang.code
                       ? 'bg-primary/20 text-primary font-medium'
                       : 'text-white/70 hover:bg-white/5 hover:text-white'
