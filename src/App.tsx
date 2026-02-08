@@ -134,6 +134,19 @@ export default function App() {
           nextLabel={currentScreenIndex === totalScreens - 2 ? t('nav.seeSummary') : t('nav.next')}
         />
       )}
+
+      {/* Footer credit */}
+      <footer className="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 text-[10px] sm:text-xs text-white/50 hover:text-white/70 transition-colors">
+        Created with a lot of coffee and vibecoding by{' '}
+        <a
+          href="https://beacons.ai/lfsolisnavarro"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary/80 hover:text-primary hover:underline"
+        >
+          @lfsolisnavarro
+        </a>
+      </footer>
     </div>
   );
 }
